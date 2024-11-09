@@ -1,0 +1,32 @@
+﻿@page "/weather"
+@using BackToDevFestPescara24.Services
+@using BackToDevFestPescara24.Components.Shared
+@inject IWeatherService WeatherService
+@* @attribute [StreamRendering] *@
+
+<PageTitle>Weather</PageTitle>
+
+<h1>Weather</h1>
+
+@if (forecasts == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <WeatherGrid Forecasts="forecasts" />
+}
+
+@code {
+    private WeatherForecast[]? forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // await Task.Delay(3000);
+        var tmp = await WeatherService.GetForecastAsync();
+        forecasts = tmp.ToArray();
+    }
+
+}

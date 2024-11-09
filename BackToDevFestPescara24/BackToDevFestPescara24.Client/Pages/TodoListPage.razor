@@ -1,0 +1,28 @@
+@page "/todos"
+@using BackToDevFestPescara24.DTO
+@using BackToDevFestPescara24.Client.Components
+@inject HttpClient Http
+@* @rendermode InteractiveWebAssembly *@
+@rendermode @(new InteractiveWebAssemblyRenderMode(false))
+
+@if (Todos is not null)
+{
+    <TodoList Todos="Todos" ToggleHandler="ToggleTodo" />
+}
+
+@code {
+    public Todo[]? Todos { get; set; }
+ 
+    protected override async Task OnInitializedAsync()
+    { 
+        Todos = await Http.GetFromJsonAsync<Todo[]>("http://localhost:5204/api/todos");
+    }
+
+    public async Task ToggleTodo(Todo todo)
+    {
+        todo.Done = !todo.Done;
+        var response = await Http.PutAsJsonAsync($"http://localhost:5204/api/todos/{todo.Id}", todo);
+        var index = Array.FindIndex(Todos, t => t.Id == todo.Id);
+        Todos[index] = await response.Content.ReadFromJsonAsync<Todo>();
+    }
+}

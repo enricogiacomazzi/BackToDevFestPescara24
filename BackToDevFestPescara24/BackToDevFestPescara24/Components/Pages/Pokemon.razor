@@ -1,0 +1,45 @@
+@page "/Pokemon"
+@using BackToDevFestPescara24.Models
+@using BackToDevFestPescara24.Services
+@inject IPokemonService PokemonService
+@rendermode InteractiveServer
+
+
+<div class="pokemon-list">
+    @if (Data is not null)
+    {
+        @foreach (var p in Data)
+        {
+            <div class="pokemon" @onclick="() => PokemonService.AddLike(p.id)">
+                <img src="@(p.sprites.front_default)"/>
+                <div>
+                    <span>@p.GetName()</span>
+                    <span>
+                        <i class="fa-solid fa-heart"></i>
+                        @p.Likes
+                    </span>
+                </div>
+            </div>
+        }
+    }
+
+</div>
+
+@code {
+    public PokemonModel[] Data => PokemonService.Pokemon;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (PokemonService.Pokemon.Length == 0)
+        {
+            await PokemonService.GetPokemon();
+        }
+
+        PokemonService.PropertyChanged += async (sender, args) =>
+        {
+            await InvokeAsync(() => StateHasChanged());
+        };
+
+    }
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch data</title>
+    <style>
+        p {
+            border: 2px solid rebeccapurple;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module">
+        const root = document.getElementById('root');
+
+        const response = await fetch('http://localhost:5204/countdown');
+        const stream = response.body.pipeThrough(new TextDecoderStream());
+
+        for await (const chunk of stream) {
+            const el = document.createElement("p");
+            el.innerText = chunk;
+            root.appendChild(el);
+        }
+    </script>
+</body>
+</html>

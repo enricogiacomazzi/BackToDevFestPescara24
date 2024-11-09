@@ -1,0 +1,11 @@
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/bin/Debug/net8.0/BackToDevFestPescara24.DTO.deps.json
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/bin/Debug/net8.0/BackToDevFestPescara24.DTO.dll
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/bin/Debug/net8.0/BackToDevFestPescara24.DTO.pdb
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/BackToDevFestPescara24.DTO.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/BackToDevFestPescara24.DTO.AssemblyInfoInputs.cache
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/BackToDevFestPescara24.DTO.AssemblyInfo.cs
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/BackToDevFestPescara24.DTO.csproj.CoreCompileInputs.cache
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/BackToDevFestPescara24.DTO.dll
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/refint/BackToDevFestPescara24.DTO.dll
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/BackToDevFestPescara24.DTO.pdb
+/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24.DTO/obj/Debug/net8.0/ref/BackToDevFestPescara24.DTO.dll

@@ -1,0 +1,13 @@
+@using BackToDevFestPescara24.DTO
+
+<ul class="list-group">
+    @foreach (var todo in Todos)
+    {
+        <TodoListItem todo="todo" ToggleHandler="@(() => ToggleHandler.InvokeAsync(todo))" />
+    }
+</ul>
+
+@code {
+    [Parameter] public Todo[] Todos { get; set; }
+    [Parameter] public EventCallback<Todo> ToggleHandler { get; set; }
+}

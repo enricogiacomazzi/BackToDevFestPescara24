@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BackToDevFestPescara24.DTO/1.0.0": {
+        "runtime": {
+          "BackToDevFestPescara24.DTO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BackToDevFestPescara24.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

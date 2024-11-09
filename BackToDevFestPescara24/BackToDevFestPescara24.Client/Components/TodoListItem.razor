@@ -1,0 +1,16 @@
+@using BackToDevFestPescara24.DTO
+
+<li class="list-group-item todo">
+    <span class="@cls">@todo.Text</span>
+    <button class="btn btn-success" @onclick="ToggleHandler">
+        Toggle
+    </button>
+</li>
+
+
+@code {
+    [Parameter] public Todo todo { get; set; }
+    [Parameter] public EventCallback ToggleHandler { get; set; }
+
+    private string cls => todo.Done ? "done" : "";
+}

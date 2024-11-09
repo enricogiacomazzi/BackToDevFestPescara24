@@ -1,0 +1,16 @@
+@page "/Note"
+@rendermode InteractiveServer
+
+<InputTextArea class="form-control" @bind-Value="@Text"></InputTextArea>
+<button class="btn btn-primary" @onclick="Save">Save</button>
+
+
+@code {
+    public string Text { get; set; }
+
+    public async Task Save()
+    {
+        var path = $"/Users/jack/Documents/Work/Talks/devfest_pescara_24/tmp/${Guid.NewGuid()}.txt";
+        await System.IO.File.WriteAllTextAsync(path, Text);
+    }
+}

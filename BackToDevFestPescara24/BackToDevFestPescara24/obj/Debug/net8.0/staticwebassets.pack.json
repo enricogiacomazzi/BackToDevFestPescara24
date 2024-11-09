@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24/obj/Debug/net8.0/scopedcss/projectbundle/BackToDevFestPescara24.bundle.scp.css",
+      "PackagePath": "staticwebassets/BackToDevFestPescara24.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24/wwwroot/confetti.js",
+      "PackagePath": "staticwebassets/confetti.js"
+    },
+    {
+      "Id": "/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24/wwwroot/fetch.html",
+      "PackagePath": "staticwebassets/fetch.html"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BackToDevFestPescara24.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BackToDevFestPescara24.props",
+      "PackagePath": "build\\BackToDevFestPescara24.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BackToDevFestPescara24.props",
+      "PackagePath": "buildMultiTargeting\\BackToDevFestPescara24.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BackToDevFestPescara24.props",
+      "PackagePath": "buildTransitive\\BackToDevFestPescara24.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

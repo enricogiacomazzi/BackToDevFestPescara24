@@ -1,0 +1,20 @@
+@page "/countdown"
+@layout Layout.EmptyLayout
+@attribute [StreamRendering]
+
+
+<h1 class="title">@Value</h1>
+
+@code {
+    public int Value { get; set; } = 10;
+
+    protected override async Task OnInitializedAsync()
+    {
+        while(Value > 0)
+        {
+            await Task.Delay(1000);
+            Value--;
+            StateHasChanged();
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@page "/tictactoe"
+@using System.Diagnostics
+@inject IJSRuntime JS
+@rendermode InteractiveWebAssembly
+
+<div class="ml-4">
+    @if (_run)
+    {
+        <h3>Turno di @(XTurn ? "X" : "O")</h3>
+    }
+    else
+    {
+        @if (_draw)
+        {
+            <h3>parità!</h3>
+        }
+        else
+        {
+            <h3>Ha vinto di @(XTurn ? "X" : "O")!</h3>
+        }
+    }
+
+    <div class="tris">
+        @foreach (var cell in Cells)
+        {
+        <div class="cell" @onclick="() => SetValue(cell)">
+            @cell.Value
+        </div>
+        }
+    </div>
+</div>
+
+
+
+
+
+@code {
+    public CellValue[] Cells { get; set; } = new CellValue[0];
+    public bool XTurn { get; set; }
+    private bool _run = true;
+    private bool _draw;
+
+    protected override void OnInitialized()
+    {
+        Cells = Enumerable.Range(0, 9).Select(x => new CellValue(x)).ToArray();
+    }
+
+    public async Task SetValue(CellValue cellValue)
+    {
+        if (_run && cellValue.Empty)
+        {
+            cellValue.SetValue(XTurn);
+
+            if (Check().Any(x => x))
+            {
+                _run = false;
+                await showWin();
+            }
+            else
+            {
+                if (Cells.All(x => !x.Empty))
+                {
+                    _run = false;
+                    _draw = true;
+                }
+                else
+                {
+                    XTurn = !XTurn;
+                }
+            }
+            StateHasChanged();
+        }
+    }
+
+    private IEnumerable<bool> Check()
+    {
+
+        var filled = Cells.Where(x => !x.Empty).ToArray();
+        yield return CheckThree(filled, x => x.Row);
+        yield return CheckThree(filled, x => x.Column);
+        yield return CheckThree(filled, x => x.IsDiagonal);
+        yield return CheckThree(filled, x => x.IsAntiDiagonal);
+    }
+
+    private bool CheckThree<T>(CellValue[] cells, Func<CellValue, T> predicate)
+    {
+        return cells.GroupBy(predicate).Any(r => 
+            r.Count() == 3 && r.DistinctBy(x => x.Value).Count() == 1);
+    }
+
+    private async Task showWin()
+    {
+        var module = await JS.InvokeAsync<IJSObjectReference>("import", "./confetti.js");
+        await module.InvokeVoidAsync("show");
+    }
+
+    // await DotNet.invokeMethodAsync("BackToDevFestPescara24.Client", "Factorial", 6)
+    [JSInvokable]
+    public static Task<int> Factorial(int value)
+    {
+        int res = 1;
+        while (value > 0)
+        {
+            res *= value--;
+        }
+
+        return Task.FromResult(res);
+    }
+        
+        
+    [DebuggerDisplay("{Row}-{Column} D: {IsDiagonal}, A: {IsAntiDiagonal}")]
+    public class CellValue
+    {
+        public int Row { get; private set; }
+        public int Column { get; private set; }
+
+        public bool IsDiagonal => Row == Column;
+        public bool IsAntiDiagonal => Row == (2 - Column);
+        public string Value { get; private set; }
+
+        public bool Empty => Value == String.Empty;
+    
+        public CellValue(int index)
+        {
+            Row = index / 3;
+            Column = index % 3;
+            Value = String.Empty;
+        }
+
+        public void SetValue(bool xTurn)
+        {
+            Value = xTurn ? "X" : "O";
+        }
+    }
+}

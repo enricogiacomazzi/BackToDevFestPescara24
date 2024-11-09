@@ -1,0 +1,47 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BackToDevFestPescara24.Client
+build_property.RootNamespace = BackToDevFestPescara24.Client
+build_property.ProjectDir = /Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client/Components/TodoList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Ub2RvTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client/Components/TodoListItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Ub2RvTGlzdEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client/Pages/TicTacToe.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGljVGFjVG9lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client/Pages/TodoListPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVG9kb0xpc3RQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jack/Documents/Work/Talks/devfest_pescara_24/BackToDevFestPescara24/BackToDevFestPescara24/BackToDevFestPescara24.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
